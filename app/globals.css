@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Messina Serif';
+  src: url('/fonts/MessinaSerif-Regular.woff2') format('woff2'),
+    url('/fonts/MessinaSerif-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Sans';
+  src: url('/fonts/MessinaSans-Regular.woff2') format('woff2'),
+    url('/fonts/MessinaSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-heading: "Krona One", sans-serif;
+  --font-serif: 'Messina Serif';
+  --font-sans: 'Messina Sans';
+  --color-announcement: #00192C;
+  --color-body: #003E6D;
+  --color-primary: #E5F2F8;
+  --color-dark: #001A2E;
+  --color-secondary: #FF763C;
+}
+
+body {
+  @apply font-sans text-sm md:text-base bg-body text-primary;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+.bg-gradient {
+  background: radial-gradient(50% 50% at 50% 50%, #086CB5 0%, rgba(8, 126, 211, 0.00) 100%);
+  aspect-ratio: 1 / 1;
+}
+
+@media (width <= 768px) {
+  .bg-gradient {
+    aspect-ratio: 1 / 1.5;
+  }
+}
